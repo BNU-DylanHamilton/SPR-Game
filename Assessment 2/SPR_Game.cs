@@ -18,19 +18,13 @@ namespace Assessment_2
         public SPR_Game()
         {
             InitializeComponent();
-            resultsLabel.Text = "";
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// This method randomly chooses the computer
+        /// choice and then moves onto other methods
+        /// to continue the game.
+        /// </summary>
         private void getComputerChoice(object sender, EventArgs e)
         {
             Random choice = new Random();
@@ -65,12 +59,20 @@ namespace Assessment_2
             Application.Exit();
         }
 
+        /// <summary>
+        /// This sets the users choice as scissors
+        /// </summary>
         private void scissorsChoice(object sender, EventArgs e)
         {
             userPictureBox.Image = Image.FromFile("Scissors.jpg");
             userChoice = "Scissors";
         }
 
+        /// <summary>
+        /// This sets a start up screen before the main
+        /// program shows and once clicked has a 1 second
+        /// wait time until the main program pops up.
+        /// </summary>
         private void startUp(object sender, EventArgs e)
         {
             StartupScreen SScreen = new StartupScreen();
@@ -79,18 +81,31 @@ namespace Assessment_2
             SScreen.Close();
         }
 
+        /// <summary>
+        /// This sets the users choice as paper
+        /// </summary>
         private void paperChoice(object sender, EventArgs e)
         {
             userPictureBox.Image = Image.FromFile("Paper.jpg");
             userChoice = "Paper";
         }
 
+        /// <summary>
+        /// This sets the users choice as rock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rockChoice(object sender, EventArgs e)
         {
             userPictureBox.Image = Image.FromFile("Rock.jpg");
             userChoice = "Rock";
         }
 
+        /// <summary>
+        /// This method checks the outcome of the computers
+        /// and users choice and then adds the right score
+        /// depending on the outcome.
+        /// </summary>
         private void checkResult()
         {
             if (compChoice == userChoice)
@@ -131,6 +146,11 @@ namespace Assessment_2
             }
         }
 
+        /// <summary>
+        /// This brings up one of three game over screens
+        /// depending on the outcome of who reaches 20 points
+        /// first.
+        /// </summary>
         private void gameOver()
         {
             if(userScore >= 20 && compScore >= 20)

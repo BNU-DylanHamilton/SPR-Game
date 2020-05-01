@@ -64,7 +64,6 @@
             this.userGroupBox.TabIndex = 0;
             this.userGroupBox.TabStop = false;
             this.userGroupBox.Text = "User Choice";
-            this.userGroupBox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // userPictureBox
             // 
@@ -196,7 +195,6 @@
             this.resultsLabel.Name = "resultsLabel";
             this.resultsLabel.Size = new System.Drawing.Size(220, 50);
             this.resultsLabel.TabIndex = 1;
-            this.resultsLabel.Text = "Results Message";
             // 
             // resultLabel
             // 
@@ -205,7 +203,6 @@
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(0, 25);
             this.resultLabel.TabIndex = 0;
-            this.resultLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // quitButton
             // 
